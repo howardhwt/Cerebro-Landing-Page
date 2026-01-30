@@ -6,7 +6,7 @@ interface PillarCardProps {
     icon: LucideIcon;
     heading: string;
     description: string;
-    example: string;
+    example?: string;
 }
 
 export function PillarCard({ icon: Icon, heading, description, example }: PillarCardProps) {
@@ -19,10 +19,12 @@ export function PillarCard({ icon: Icon, heading, description, example }: Pillar
             <h3 className="text-2xl font-bold mb-4 text-white">{heading}</h3>
             <p className="text-gray-300 mb-6 leading-relaxed flex-grow">{description}</p>
 
-            <div className="bg-black/20 p-4 rounded-lg text-sm text-gray-400 border border-white/5 font-mono">
-                <span className="text-accent/70 block mb-1 text-xs uppercase tracking-wide">Example</span>
-                {example}
-            </div>
+            {example && (
+                <div className="bg-black/20 p-4 rounded-lg text-sm text-gray-400 border border-white/5 font-mono">
+                    <span className="text-accent/70 block mb-1 text-xs uppercase tracking-wide">Example</span>
+                    {example}
+                </div>
+            )}
         </SpotlightCard>
     );
 }

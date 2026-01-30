@@ -51,12 +51,16 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl text-accent mb-8 font-medium max-w-2xl mx-auto">
-              Close bigger deals. Faster sales cycles. 3x faster rep ramp.
+              Turn every customer need and timeline into a perfectly timed follow-up—so reps never miss their moment to sell.
             </p>
 
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-6 leading-relaxed">
               Your sales reps capture customer problems in calls but forget them by the time they need to re-engage.
               We listen to every call, remember every problem, and alert your team at the exact moment it's time to sell.
+            </p>
+
+            <p className="text-sm text-gray-500 mb-12">
+              Built for B2B teams with 5–50 reps and long, multi-touch sales cycles.
             </p>
 
             <a
@@ -191,27 +195,30 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-sm font-bold tracking-widest text-accent uppercase mb-3">The Silent Revenue Leak</h2>
               <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">Your team is leaving money on the table.</h3>
-              <p className="text-xl text-gray-400">
+              <p className="text-xl text-gray-400 mb-4">
                 70% of sales leaders lose <span className="text-white font-semibold">$50K+ annually</span> to forgotten customer needs.
+              </p>
+              <p className="text-lg text-gray-500">
+                This isn't about bad messaging. It's about lost memory and sloppy timing.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <ProblemCard
                 heading="Reps forget needs"
-                description="A customer mentions they need compliance automation 'next quarter.' The rep jots it down. But when next quarter arrives, nobody remembers the conversation."
+                description="A customer mentions they need compliance automation 'next quarter.' The rep jots it down. But when next quarter arrives, nobody remembers the conversation. By the time the customer is actually ready, your team has moved on—or sends a generic, irrelevant email."
                 quote="Most of my day ends up spent following up with people because communication has gotten so bad...Why leave people in the dark?"
                 author="Sales Rep, r/sales"
               />
               <ProblemCard
                 heading="Poorly timed follow-ups"
-                description="Reps send follow-ups at random times with no context. Customers ignore them because they aren't relevant in that moment. Deals die."
+                description="Reps send follow-ups at random times with no context. Customers ignore them because they aren't relevant in that moment. Deals die. You're either too early to be relevant or too late to be considered."
                 quote="If they say 'call me in 3 months' we say 'what's going to change?' But we forget to ask, and we forget to call back."
                 author="VP Sales"
               />
               <ProblemCard
                 heading="Missed upsell chances"
-                description="In project-based services, customers mention needs during Phase 1 that aren't in scope. When Phase 2 planning arrives, nobody remembers what they said."
+                description="In project-based services, customers mention needs during Phase 1 that aren't in scope. When Phase 2 planning arrives, nobody remembers what they said. Expansion revenue dies quietly because no one remembers what the customer signaled months ago."
                 quote="We finish Phase 1, move on. Customer has 3 problems they mentioned but weren't in scope. Nobody follows up."
                 author="Impl. Manager"
               />
@@ -230,20 +237,17 @@ export default function Home() {
             <PillarCard
               icon={Ear}
               heading="Listen to Every Call"
-              description="Our AI listens to your customer calls and identifies every problem, objection, and need mentioned. We extract the pain, the timeline, and the urgency."
-              example="[Problem: Compliance] [Timeline: Q3 2026] [Severity: High]"
+              description="Our AI listens to your customer calls and identifies every problem, objection, and need mentioned. We extract the pain, the timeline, and the urgency. This creates a persistent memory of every need and timeline across your entire book of business."
             />
             <PillarCard
               icon={Lightbulb}
               heading="Match to Product"
-              description="We understand your product. We know which features solve which problems. We automatically match customer needs to the exact capabilities you have."
-              example="[Problem: Compliance] → [Audit Trails Feature + HIPAA Certification]"
+              description="We understand your product. We know which features solve which problems. We automatically match customer needs to the exact capabilities you have. So reps don't just remember what hurt; they know exactly how your product solves it. Today, reps see these mappings in their alerts and reviews; next, we'll surface them live in-call, so even new reps always know what to say."
             />
             <PillarCard
               icon={Bell}
               heading="Alert at Right Time"
-              description="We don't send random follow-ups. We alert your sales team the exact moment a customer's stated timeline arrives. With context, talking points, and next steps."
-              example="Alert: 'Acme mentioned budget for Q3. It's now Q3. Emphasize Audit Trails.'"
+              description="If a customer said 'Q3 budget,' Cerebro will ping your rep on July 1 with the exact pain point and suggested angle—no one has to remember anything."
             />
           </div>
         </section>
@@ -255,10 +259,10 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">The Result</h2>
               <div className="space-y-6">
                 {[
-                  { title: "Close Bigger Deals", desc: "You know exactly which problems to emphasize. No generic pitches." },
-                  { title: "Shorter Sales Cycles", desc: "Re-engage at the exact moment availability matches need." },
-                  { title: "Faster Rep Ramp", desc: "New reps learn from every deal and see what solves problems best." },
-                  { title: "Systematic Upsells", desc: "Phase 1 problems automatically become Phase 2 opportunities." }
+                  { title: "Close More Deals", desc: "You close more deals because every follow-up anchors on the exact pains customers mentioned — at the moment they're finally ready to buy." },
+                  { title: "Shorter Sales Cycles", desc: "Shorten cycles by re-engaging precisely when customers' budget and priority go live, instead of blasting random follow-ups." },
+                  { title: "Faster Rep Ramp", desc: "New reps ramp faster by seeing exactly which pains, timelines, and product combos led to closed deals — so they can copy winning patterns instead of guessing from generic summaries." },
+                  { title: "Systematic Upsells", desc: "Turn every 'not in scope yet' comment into a scheduled expansion touch, triggered automatically when timing hits." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <CheckCircle2 className="text-accent flex-shrink-0 w-6 h-6 mt-1" />
@@ -268,6 +272,14 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Sales Enablement Callout */}
+              <div className="mt-8 bg-accent/5 border border-accent/20 rounded-xl p-6">
+                <h4 className="text-sm font-bold text-accent uppercase tracking-wide mb-2">For Sales Enablement</h4>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Cerebro gives new reps a library of real examples: which customer pains appeared on calls, what was pitched, and what actually closed — so training is built on reality, not scripts.
+                </p>
               </div>
             </div>
             <div className="relative">
