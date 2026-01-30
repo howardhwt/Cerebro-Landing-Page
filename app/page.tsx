@@ -254,9 +254,14 @@ export default function Home() {
 
         {/* RESULTS SECTION */}
         <section className="py-24 bg-gradient-to-br from-accent/5 to-transparent border-y border-white/5">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="max-w-4xl mx-auto px-6">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">The Result</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Trust That Scales Revenue</h2>
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                <span className="text-accent font-semibold">High-Trust Partnerships:</span> Listening is your most profitable tactic. 
+                When reps recall specific needs months later, they prove they aren't just selling—they’re solving. 
+                This shifts the dynamic from "vendor" to "trusted partner," eliminating friction and fast-tracking closed deals.
+              </p>
               <div className="space-y-6">
                 {[
                   { title: "Close More Deals", desc: "You close more deals because every follow-up anchors on the exact pains customers mentioned — at the moment they're finally ready to buy." },
@@ -282,29 +287,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-accent/20 blur-[100px] rounded-full mix-blend-screen"></div>
-              <div className="bg-card border border-white/10 rounded-2xl p-8 relative z-10">
-                <div className="flex items-center gap-4 mb-6 border-b border-white/10 pb-6">
-                  <div className="h-10 w-10 bg-green-500/20 rounded-full flex items-center justify-center text-green-400">
-                    <CheckCircle2 size={24} />
-                  </div>
-                  <div>
-                    <div className="text-white font-bold">Deal Closed</div>
-                    <div className="text-sm text-gray-400">$125,000 ARR • Enterprise Plan</div>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="h-2 bg-white/10 rounded w-3/4"></div>
-                  <div className="h-2 bg-white/10 rounded w-1/2"></div>
-                  <div className="h-2 bg-white/10 rounded w-full"></div>
-                </div>
-                <div className="mt-8 pt-6 border-t border-white/10">
-                  <p className="text-sm text-gray-400 italic">"Cerebro alerted us exactly when they got their budget approved. We would have missed it otherwise."</p>
-                  <div className="mt-2 text-sm font-semibold text-white">- VP of Sales, TechCorp</div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </section>
 
