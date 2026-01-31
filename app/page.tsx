@@ -54,9 +54,13 @@ export default function Home() {
               Turn every customer need and timeline into a perfectly timed follow-up—so reps never miss their moment to sell.
             </p>
 
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-6 leading-relaxed">
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-4 leading-relaxed">
               Your sales reps capture customer problems in calls but forget them by the time they need to re-engage.
               We listen to every call, remember every problem, and alert your team at the exact moment it's time to sell.
+            </p>
+
+            <p className="text-base text-gray-300 max-w-3xl mx-auto mb-6 font-medium">
+              Cerebro does what your CRM can't: it turns loose call notes into dated follow-up triggers tied to real customer timelines.
             </p>
 
             <p className="text-sm text-gray-500 mb-12">
@@ -368,7 +372,10 @@ export default function Home() {
         <section id="how-it-works" className="py-24 px-6 max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-sm font-bold tracking-widest text-accent uppercase mb-3">The 3-Pillar Solution</h2>
-            <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">We built a system that solves this.</h3>
+            <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">We built a system that solves this.</h3>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              Cerebro isn't another call recorder or note-taker—it's a contextual re-engagement engine that turns conversations into dated, product-specific follow-up plays.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -379,14 +386,41 @@ export default function Home() {
             />
             <PillarCard
               icon={Lightbulb}
-              heading="Match to Product"
-              description="We understand your product. We know which features solve which problems. We automatically match customer needs to the exact capabilities you have. So reps don't just remember what hurt; they know exactly how your product solves it. Today, reps see these mappings in their alerts and reviews; next, we'll surface them live in-call, so even new reps always know what to say."
+              heading="Match Needs to Product (Our Moat)"
+              description="We ingest your product docs, enablement materials, past won deals, and call transcripts to learn which features solve which pains. When a prospect says 'we need SOC2 before Q3,' Cerebro doesn't just tag 'security'; it suggests your SOC2 automation module and proven talk tracks from past wins. Where call recorders stop at what was said, Cerebro learns what actually solved it and brings that mapping back to reps when it matters."
             />
             <PillarCard
               icon={Bell}
               heading="Alert at Right Time"
               description="If a customer said 'Q3 budget,' Cerebro will ping your rep on July 1 with the exact pain point and suggested angle—no one has to remember anything."
             />
+          </div>
+
+          {/* Built to Fit Your Stack */}
+          <div className="mt-16 max-w-2xl mx-auto">
+            <div className="bg-white/[0.03] rounded-2xl p-8 border border-white/10">
+              <h4 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                <Package size={18} className="text-accent" />
+                Built to Fit Your Stack
+              </h4>
+              <p className="text-gray-400 mb-6">
+                Cerebro connects to the tools you already use, so you don't have to overhaul your workflow on day one. It starts simple—just your call recordings and CRM—and layers in more context over time.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 text-gray-300">
+                  <CheckCircle2 className="text-accent w-5 h-5 flex-shrink-0 mt-0.5" />
+                  <span>Works with your existing call recorder (Zoom, Gong, Dialer, etc.)—no change to how reps run meetings.</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-300">
+                  <CheckCircle2 className="text-accent w-5 h-5 flex-shrink-0 mt-0.5" />
+                  <span>Reads from, but doesn't rewrite, your CRM; we create tasks and alerts instead of flooding you with new objects.</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-300">
+                  <CheckCircle2 className="text-accent w-5 h-5 flex-shrink-0 mt-0.5" />
+                  <span>Start pilots with calls + CRM only, then add product docs and calendars later if and when it makes sense.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -404,7 +438,7 @@ export default function Home() {
                 {[
                   { title: "Close More Deals", desc: "You close more deals because every follow-up anchors on the exact pains customers mentioned — at the moment they're finally ready to buy." },
                   { title: "Shorter Sales Cycles", desc: "Shorten cycles by re-engaging precisely when customers' budget and priority go live, instead of blasting random follow-ups." },
-                  { title: "Faster Rep Ramp", desc: "New reps ramp faster by seeing exactly which pains, timelines, and product combos led to closed deals — so they can copy winning patterns instead of guessing from generic summaries." },
+                  { title: "Faster Rep Ramp", desc: "New reps ramp faster by seeing exactly which pains, timelines, and product combos led to closed deals — so they can copy winning patterns instead of guessing from generic summaries. Because Cerebro shows real 'pain → product → outcome' chains, training is built on reality, not role-play scripts." },
                   { title: "Systematic Upsells", desc: "Turn every 'not in scope yet' comment into a scheduled expansion touch, triggered automatically when timing hits." }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
@@ -448,6 +482,9 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                <p className="mt-4 pt-4 border-t border-white/10 text-sm text-gray-400">
+                  If you continue after the pilot, Cerebro is priced as a simple per-rep SaaS seat, with volume discounts for larger teams — just like your other sales tools.
+                </p>
               </div>
 
               <div className="bg-white/5 rounded-xl p-8 border border-white/10">
