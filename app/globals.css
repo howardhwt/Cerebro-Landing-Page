@@ -128,3 +128,222 @@ h6 {
 .spotlight-card:hover::before {
   opacity: 1;
 }
+
+/* Hero Timeline Animations */
+@keyframes flowPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1.02);
+  }
+}
+
+@keyframes dotFlow {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2), 0 0 40px rgba(6, 182, 212, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.4), 0 0 60px rgba(6, 182, 212, 0.2);
+  }
+}
+
+@keyframes typeIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes floatSubtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes revealCard {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-card-1 {
+  animation: revealCard 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  opacity: 0;
+}
+
+.hero-card-2 {
+  animation: revealCard 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+  opacity: 0;
+}
+
+.hero-card-3 {
+  animation: revealCard 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+  opacity: 0;
+}
+
+.flow-line {
+  animation: flowPulse 3s ease-in-out infinite;
+}
+
+.flow-dot {
+  animation: dotFlow 2.5s linear infinite;
+}
+
+.glow-card {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.float-card {
+  animation: floatSubtle 4s ease-in-out infinite;
+}
+
+.typing-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Enhanced glow effects */
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 40px rgba(6, 182, 212, 0.6));
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ready to Act pulse effect */
+@keyframes readyPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4), 0 0 30px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0), 0 0 50px rgba(16, 185, 129, 0.3);
+  }
+}
+
+.ready-pulse {
+  animation: readyPulse 2s ease-in-out infinite;
+}
+
+/* Flow particles animation */
+@keyframes flowParticle {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.flow-particle {
+  animation: flowParticle 3s ease-in-out infinite;
+}
+
+.flow-particle-delayed {
+  animation: flowParticle 3s ease-in-out infinite 1s;
+}
+
+.flow-particle-delayed-2 {
+  animation: flowParticle 3s ease-in-out infinite 2s;
+}
+
+/* Shimmer effect for analyzed badge */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.shimmer-badge {
+  background: linear-gradient(
+    90deg,
+    rgba(6, 182, 212, 0.1) 0%,
+    rgba(6, 182, 212, 0.3) 50%,
+    rgba(6, 182, 212, 0.1) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Subtle breathe animation */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+}
+
+.breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
