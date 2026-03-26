@@ -24,28 +24,27 @@
 
 ## Next Sprint
 
-- [ ] Replace or reframe the product mockup
-  - Current mockup shows a CRM-like live dashboard (doesn't match MVP)
-  - Should show actual workflow: transcript in → structured output out
-  - Highlight citations and confidence scores (stated key differentiator)
+- [x] Replace or reframe the product mockup
+  - New 2-panel interface: left = raw transcript with highlighted extractions, right = Cerebro output (pains + confidence scores + citations + product match + follow-up draft)
+  - Shows actual V1 workflow accurately
 
-- [ ] Rewrite Problem section with two-persona framing (from brief)
+- [x] Rewrite Problem section with two-persona framing (from brief)
   - Persona 1: The rep who misses things in the moment
   - Persona 2: The successor who inherits nothing
 
-- [ ] Remove/rewrite "Built to Fit Your Stack" section
-  - Currently implies CRM integrations that don't exist in V1
-  - Either cut or reframe to accurately describe what V1 does
+- [x] Remove/rewrite "Built to Fit Your Stack" section
+  - Replaced with "What V1 gives you today" — honest description of current capabilities
+  - No implied integrations
 
-- [ ] Add "How It Works" 3-step workflow visual
-  - Step 1: Ingest your product catalog
-  - Step 2: Upload a call transcript
-  - Step 3: Get structured output (pain mappings, recap, follow-up draft)
-  - This is different from the current "3 Pillars" — this shows user workflow
+- [x] Add "How It Works" 3-step workflow visual
+  - Step 1: Connect your product catalog (Upload icon)
+  - Step 2: Upload a call transcript (FileText icon)
+  - Step 3: Get structured output (Zap icon)
+  - Added before the 3-pillar section within the solution section
 
-- [ ] Audit and cut ambient animations
-  - Remove at least half: .breathe, .flow-particle, .shimmer-badge, .float-card are all running constantly
-  - Keep only purposeful entry animations and hover states
+- [x] Audit and cut ambient animations
+  - Removed: .breathe, .flow-particle, .flow-particle-delayed, .shimmer-badge, .float-card, .flow-line, .flow-dot, .glow-card, .ready-pulse, .pulse-glow, .typing-cursor, .hero-card-1/2/3
+  - Kept: .animate-in, .delay-*, .spotlight-card (all purposeful)
 
 ## Polish (Design Bandwidth)
 
@@ -57,12 +56,13 @@
   - Reduce glow effects on cards and buttons
   - One well-placed accent > neon everywhere
 
-- [ ] Fix broken nav and footer items
-  - Remove "Home" link from nav (redundant on single page)
-  - Fix mobile hamburger (currently non-functional)
-  - Add contact email: founders@trycerebro.com
-  - Add location: Toronto, Canada
-  - Remove LinkedIn link unless it's a real active page
+- [x] Fix nav and footer items
+  - Removed "Home" link from nav
+  - Fixed mobile hamburger (now a client component with toggle state)
+  - Added founders@trycerebro.com to footer
+  - Added "Toronto, Canada" to footer
+  - Removed LinkedIn link
+  - Added "Team" nav item linking to #team anchor
 
-- [ ] Remove unsubstantiated stat
-  - "70% of sales leaders lose $50K+ annually..." — needs a source or should be cut
+- [x] Remove unsubstantiated stat
+  - Removed "70% of sales leaders lose $50K+ annually..." from Problem section
