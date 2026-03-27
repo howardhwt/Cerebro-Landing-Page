@@ -37,7 +37,7 @@ export default function Home() {
 
             <a
               href="#pilot"
-              className="inline-flex items-center bg-accent hover:bg-cyan-400 text-background font-bold px-8 py-4 rounded-lg text-lg transition-all shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:-translate-y-1"
+              className="inline-flex items-center bg-accent hover:bg-cyan-400 text-background font-bold px-8 py-4 rounded-lg text-lg shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:-translate-y-1 transition-[color,background-color,box-shadow,transform] duration-200"
             >
               Get Early Access
               <ArrowRight className="ml-2 w-5 h-5" />

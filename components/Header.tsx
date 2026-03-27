@@ -24,7 +24,7 @@ export function Header() {
 
         <a
           href="#pilot"
-          className="hidden md:flex md:items-center bg-accent/90 hover:bg-accent text-white px-5 py-2.5 min-h-[44px] rounded-lg text-sm font-medium transition-all shadow-lg shadow-accent/20"
+          className="hidden md:flex md:items-center bg-accent/90 hover:bg-accent text-white px-5 py-2.5 min-h-[44px] rounded-lg text-sm font-medium transition-colors shadow-lg shadow-accent/20"
         >
           Get Early Access
         </a>
@@ -57,7 +57,7 @@ export function Header() {
             ))}
             <a
               href="#pilot"
-              className="mt-3 bg-accent/90 hover:bg-accent text-white px-5 py-3 rounded-lg text-sm font-medium transition-all text-center"
+              className="mt-3 bg-accent/90 hover:bg-accent text-white px-5 py-3 rounded-lg text-sm font-medium transition-colors text-center"
               onClick={() => setMobileOpen(false)}
             >
               Get Early Access

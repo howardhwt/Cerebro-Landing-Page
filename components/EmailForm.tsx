@@ -160,7 +160,7 @@ export function EmailForm() {
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-accent hover:bg-cyan-400 text-background font-bold py-4 rounded-lg transition-all transform active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]"
+                className="w-full bg-accent hover:bg-cyan-400 text-background font-bold py-4 rounded-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transition-[color,background-color,box-shadow,transform,opacity] duration-200"
             >
                 {isSubmitting ? <Loader2 className="animate-spin mr-2" /> : 'Get Early Access'}
             </button>
