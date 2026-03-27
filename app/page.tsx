@@ -61,7 +61,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto px-6">
             <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">The Problem</p>
+              <p className="text-sm font-bold tracking-widest text-accent-warm uppercase mb-3">The Problem</p>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The same context problem. Two different faces.</h2>
             </div>
             </ScrollReveal>
@@ -69,7 +69,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Persona 1 */}
               <div className="bg-white/[0.03] rounded-2xl p-8 border border-white/10">
-                <div className="text-xs font-bold text-accent uppercase tracking-wider mb-4">The rep who misses things in the moment</div>
+                <div className="text-xs font-bold text-accent-warm uppercase tracking-wider mb-4">The rep who misses things in the moment</div>
                 <p className="text-gray-300 leading-relaxed mb-6">
                   They walk out of a discovery call with gold — and bury it in a Google Doc no one reads again. They heard the pain, but only captured what they already understood. The signal that could have closed the deal? Gone before the follow-up email.
                 </p>
@@ -81,7 +81,7 @@ export default function Home() {
 
               {/* Persona 2 */}
               <div className="bg-white/[0.03] rounded-2xl p-8 border border-white/10">
-                <div className="text-xs font-bold text-accent uppercase tracking-wider mb-4">The successor who inherits nothing</div>
+                <div className="text-xs font-bold text-accent-warm uppercase tracking-wider mb-4">The successor who inherits nothing</div>
                 <p className="text-gray-300 leading-relaxed mb-6">
                   New AE on the account. CS director picking up a client relationship. They are not flying blind because they forgot — they are flying blind because the system never gave them anything to remember. Every handoff starts from zero.
                 </p>
@@ -98,7 +98,7 @@ export default function Home() {
         <section id="how-it-works" className="py-24 px-6 max-w-5xl mx-auto">
           <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">How It Works</p>
+            <p className="text-sm font-bold tracking-widest text-accent-warm uppercase mb-3">How It Works</p>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Three steps. No integrations required.</h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Start a pilot with a product catalog and a few call transcripts. That&apos;s it.
@@ -109,7 +109,7 @@ export default function Home() {
           {/* 3-Step Workflow */}
           <ScrollReveal>
           <div className="relative grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 mb-20">
-            <div className="hidden md:block absolute top-8 left-[20%] right-[20%] border-t border-dashed border-accent/15" aria-hidden="true" />
+            <div className="hidden md:block absolute top-8 left-[20%] right-[20%] border-t border-dashed border-accent-warm/15" aria-hidden="true" />
             {[
               {
                 icon: Upload,
@@ -131,11 +131,11 @@ export default function Home() {
               },
             ].map((item, i) => (
               <div key={i} className="relative">
-                <div className="text-[56px] md:text-[64px] font-bold text-accent/8 font-mono leading-none -mb-3 select-none" aria-hidden="true">
+                <div className="text-[56px] md:text-[64px] font-bold text-accent-warm/8 font-mono leading-none -mb-3 select-none" aria-hidden="true">
                   {item.step}
                 </div>
                 <h4 className="text-base font-bold text-white mb-2 flex items-center gap-2">
-                  <item.icon size={15} className="text-accent/70 shrink-0" />
+                  <item.icon size={15} className="text-accent-warm/70 shrink-0" />
                   {item.heading}
                 </h4>
                 <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
@@ -146,7 +146,7 @@ export default function Home() {
 
           {/* What Cerebro extracts */}
           <div className="text-center mb-12">
-            <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">What we extract</p>
+            <p className="text-sm font-bold tracking-widest text-accent-warm uppercase mb-3">What we extract</p>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Not just a summary. Structured signal.</h2>
           </div>
 
@@ -169,7 +169,7 @@ export default function Home() {
               },
             ].map((item, i) => (
               <div key={i} className="flex gap-5">
-                <item.icon size={20} className="text-accent shrink-0 mt-1" />
+                <item.icon size={20} className="text-accent-warm shrink-0 mt-1" />
                 <div>
                   <h4 className="text-lg font-bold text-white mb-1.5">{item.heading}</h4>
                   <p className="text-gray-400 leading-relaxed">{item.description}</p>
@@ -206,7 +206,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
             <div className="text-center mb-12">
-              <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">Positioning</p>
+              <p className="text-sm font-bold tracking-widest text-accent-warm uppercase mb-3">Positioning</p>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The last mile Gong leaves unaddressed.</h2>
               <p className="text-lg text-gray-400 max-w-2xl mx-auto">
                 Gong records everything. But a full transcript doesn&apos;t tell your CS director which product solves which pain, or give your new AE the context they need to pick up where someone left off.
@@ -295,7 +295,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">Team</p>
+              <p className="text-sm font-bold tracking-widest text-accent-warm uppercase mb-3">Team</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Built by people who&apos;ve done the job.</h2>
             </div>
             </ScrollReveal>
@@ -322,11 +322,11 @@ export default function Home() {
                 },
               ].map((founder, i) => (
                 <div key={i} className="bg-white/[0.03] rounded-2xl p-6 border border-white/10">
-                  <div className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center text-accent font-bold text-lg mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-accent-warm/15 border border-accent-warm/20 flex items-center justify-center text-accent-warm font-bold text-lg mb-4">
                     {founder.initials}
                   </div>
                   <div className="text-lg font-bold text-white mb-1">{founder.name}</div>
-                  <div className="text-sm text-accent mb-3">{founder.title}</div>
+                  <div className="text-sm text-accent-warm mb-3">{founder.title}</div>
                   <p className="text-sm text-gray-400 leading-relaxed">{founder.bio}</p>
                 </div>
               ))}
@@ -349,7 +349,7 @@ export default function Home() {
                 <ul className="space-y-3">
                   {['60 days of free access', 'We analyze your calls weekly', 'Weekly coaching alerts sent to reps', 'Weekly feedback calls with our team', 'No obligation to continue'].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle2 className="text-accent w-5 h-5 flex-shrink-0" />
+                      <CheckCircle2 className="text-accent-warm w-5 h-5 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -364,7 +364,7 @@ export default function Home() {
                 <ul className="space-y-3">
                   {['5-50 sales reps', '$5M-$100M ARR', 'B2B SaaS or project-based services', 'Need re-engagement or expansion'].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-300">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent-warm flex-shrink-0"></div>
                       {item}
                     </li>
                   ))}
