@@ -1,17 +1,17 @@
-# Cerebro Design System
+# Salency Design System
 
 > "Stripe's clarity meets Linear's confidence."
-> — CEREBRO_LANDING_PAGE.md brief
+> — SALENCY_LANDING_PAGE.md brief
 
 ## Design Philosophy
 
-Cerebro is a B2B sales intelligence tool for revenue leaders, not developers. The visual language should feel like **a company already in market** — editorial confidence, warm professionalism, and zero AI-startup clichés. Every pixel should answer the question: "Would a VP of Sales at a $30M ARR company trust this enough to reply to the pilot email?"
+Salency is a B2B sales intelligence tool for revenue leaders, not developers. The visual language should feel like **a company already in market** — editorial confidence, warm professionalism, and zero AI-startup clichés. Every pixel should answer the question: "Would a VP of Sales at a $30M ARR company trust this enough to reply to the pilot email?"
 
 ### Three Principles
 
-1. **Signal over noise.** Just as Cerebro extracts structured context from messy transcripts, the design should extract clarity from complexity. Clean surfaces, strong type hierarchy, no visual clutter.
+1. **Signal over noise.** Just as Salency extracts structured context from messy transcripts, the design should extract clarity from complexity. Clean surfaces, strong type hierarchy, no visual clutter.
 2. **Warm professionalism.** B2B sales culture runs on trust and relationships, not on dark-mode hacker aesthetics. The palette and typography should project confidence and warmth in equal measure.
-3. **Product-led identity.** The HeroMock — a functioning replica of Cerebro's actual UI — is the most distinctive element on the page. Let the product do the visual heavy lifting. Everything else should frame it, not compete with it.
+3. **Product-led identity.** The HeroMock — a functioning replica of Salency's actual UI — is the most distinctive element on the page. Let the product do the visual heavy lifting. Everything else should frame it, not compete with it.
 
 ---
 
@@ -24,7 +24,7 @@ Research conducted March 2026 across five reference sites.
 | Product | Theme | Primary Accent | Fonts | Visual Character |
 |---|---|---|---|---|
 | **Gong** | Light (white) | Deep purple `oklch(0.53 0.23 297)` | Custom "Grotesk" + Inter + Inter Tight | Energetic, social-proof-heavy, human photography |
-| **Clari** | Dark hero → light sections | Cyan/teal | "Maison Neue" + "Faktum" condensed | Enterprise-heavyweight, dark+cyan (very similar to current Cerebro) |
+| **Clari** | Dark hero → light sections | Cyan/teal | "Maison Neue" + "Faktum" condensed | Enterprise-heavyweight, dark+cyan (very similar to current Salency) |
 | **Apollo** | Warm cream `~#F5F0E8` | Amber/gold | Soehne + Founders Grotesk + ABC Diatype | Most distinctive — warm, editorial, deliberately breaks from blue/purple |
 
 ### Brief Reference Sites
@@ -36,11 +36,11 @@ Research conducted March 2026 across five reference sites.
 
 ### Key Findings
 
-- **Every competitor uses blue or purple.** Gong = purple, Clari = cyan, Salesforce = blue. Using cyan positions Cerebro as "smaller Clari."
+- **Every competitor uses blue or purple.** Gong = purple, Clari = cyan, Salesforce = blue. Using cyan positions Salency as "smaller Clari."
 - **Apollo broke the mold** with warm cream + amber and it works. The warmth signals trust and approachability — qualities B2B sales leaders respond to.
 - **Premium typefaces are table stakes.** Gong, Apollo, and Stripe all use custom or distinctive fonts. System fonts (Inter, Roboto) read as generic.
 - **Light themes dominate** for B2B sales audiences (Gong, Apollo, Stripe). Dark is more dev-tool (Linear). But dark can work for premium positioning if warm enough.
-- **Product UI screenshots are essential.** Linear and Stripe both let their product visuals carry the identity. Cerebro's HeroMock already does this well.
+- **Product UI screenshots are essential.** Linear and Stripe both let their product visuals carry the identity. Salency's HeroMock already does this well.
 
 ---
 

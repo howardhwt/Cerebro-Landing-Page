@@ -25,7 +25,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Cerebro - Never Forget What Customers Need",
+  title: "Salency - Never Forget What Customers Need",
   description: "B2B Sales Intelligence that listens, remembers, and alerts.",
 };
 

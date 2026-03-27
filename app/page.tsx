@@ -28,7 +28,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-2xl mx-auto leading-relaxed">
-              Gong records your calls. Cerebro solves what happens after.
+              Gong records your calls. Salency solves what happens after.
             </p>
 
             <p className="text-base text-gray-500 max-w-2xl mx-auto mb-12">
@@ -115,13 +115,13 @@ export default function Home() {
                 icon: Upload,
                 step: "01",
                 heading: "Connect your product catalog",
-                desc: "Upload your product docs, feature list, and positioning. Cerebro builds a queryable knowledge base from your specific catalog — not generic AI guesses.",
+                desc: "Upload your product docs, feature list, and positioning. Salency builds a queryable knowledge base from your specific catalog — not generic AI guesses.",
               },
               {
                 icon: FileText,
                 step: "02",
                 heading: "Upload a call transcript",
-                desc: "Paste or upload any transcript. Cerebro extracts pains, objections, competitors, timelines, and requirements. Every extraction is cited back to the source line.",
+                desc: "Paste or upload any transcript. Salency extracts pains, objections, competitors, timelines, and requirements. Every extraction is cited back to the source line.",
               },
               {
                 icon: Zap,
@@ -144,7 +144,7 @@ export default function Home() {
           </div>
           </ScrollReveal>
 
-          {/* What Cerebro extracts */}
+          {/* What Salency extracts */}
           <div className="text-center mb-12">
             <p className="text-sm font-bold tracking-widest text-accent-warm uppercase mb-3">What we extract</p>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Not just a summary. Structured signal.</h2>
@@ -160,7 +160,7 @@ export default function Home() {
               {
                 icon: Lightbulb,
                 heading: "Map pain to your products",
-                description: "Cerebro doesn't just tag topics. It maps each extracted pain to specific products and features in your catalog, with reasoning. Where call recorders stop at what was said, Cerebro connects it to what actually solves it.",
+                description: "Salency doesn't just tag topics. It maps each extracted pain to specific products and features in your catalog, with reasoning. Where call recorders stop at what was said, Salency connects it to what actually solves it.",
               },
               {
                 icon: Bell,
@@ -220,17 +220,17 @@ export default function Home() {
                   <tr className="border-b border-white/10">
                     <th className="text-left py-4 pr-8 text-gray-500 font-medium w-1/2"></th>
                     <th className="py-4 px-6 text-center text-gray-400 font-semibold">Gong</th>
-                    <th className="py-4 px-6 text-center text-white font-semibold">Cerebro</th>
+                    <th className="py-4 px-6 text-center text-white font-semibold">Salency</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { capability: "Records calls", gong: true, cerebro: "Works with any transcript" },
-                    { capability: "Coaches reps in the moment", gong: true, cerebro: false },
-                    { capability: "Extracts pain in the customer’s own words", gong: false, cerebro: true },
-                    { capability: "Maps pain to your specific products", gong: false, cerebro: true },
-                    { capability: "Generates context-aware follow-up drafts", gong: false, cerebro: true },
-                    { capability: "Gives successors full account context", gong: false, cerebro: true },
+                    { capability: "Records calls", gong: true, salency: "Works with any transcript" },
+                    { capability: "Coaches reps in the moment", gong: true, salency: false },
+                    { capability: "Extracts pain in the customer’s own words", gong: false, salency: true },
+                    { capability: "Maps pain to your specific products", gong: false, salency: true },
+                    { capability: "Generates context-aware follow-up drafts", gong: false, salency: true },
+                    { capability: "Gives successors full account context", gong: false, salency: true },
                   ].map((row, i) => (
                     <tr key={i} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
                       <td className="py-4 pr-8 text-gray-300">{row.capability}</td>
@@ -244,12 +244,12 @@ export default function Home() {
                         )}
                       </td>
                       <td className="py-4 px-6 text-center">
-                        {row.cerebro === true ? (
+                        {row.salency === true ? (
                           <span className="text-accent font-semibold">✓</span>
-                        ) : row.cerebro === false ? (
+                        ) : row.salency === false ? (
                           <span className="text-gray-700">—</span>
                         ) : (
-                          <span className="text-accent text-xs font-medium">{row.cerebro}</span>
+                          <span className="text-accent text-xs font-medium">{row.salency}</span>
                         )}
                       </td>
                     </tr>
@@ -267,12 +267,12 @@ export default function Home() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">What changes when nothing gets lost.</h2>
               <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                Cerebro doesn&apos;t close deals. It captures the context your team needs to close them — so the signal from a January discovery call is still there when the customer&apos;s budget unlocks in Q3.
+                Salency doesn&apos;t close deals. It captures the context your team needs to close them — so the signal from a January discovery call is still there when the customer&apos;s budget unlocks in Q3.
               </p>
               <div className="space-y-6">
                 {[
                   { title: "Capture what gets lost", desc: "Every pain, timeline, and buying signal is extracted from calls and stored — so reps re-engage with the exact context that was discussed, not a blank CRM field." },
-                  { title: "Re-engage at the right moment", desc: "Cerebro pings reps when a customer stated timeline arrives — not randomly, not too late. The follow-up writes itself from real call context." },
+                  { title: "Re-engage at the right moment", desc: "Salency pings reps when a customer stated timeline arrives — not randomly, not too late. The follow-up writes itself from real call context." },
                   { title: "Faster rep ramp", desc: "New reps inherit real account history instead of starting from zero. Training is built on actual pain-to-product chains from past calls, not role-play scripts." },
                   { title: "Expansion revenue you would otherwise miss", desc: "Every out-of-scope comment becomes a scheduled follow-up touch, triggered when the timing actually hits." }
                 ].map((item, i) => (
@@ -311,13 +311,13 @@ export default function Home() {
                 {
                   name: "Nikki Ip",
                   title: "Co-founder & COO",
-                  bio: "Building Cerebro’s go-to-market and operations. Previously led revenue analytics and operational strategy at Adaptavist Group. Background in institutional client management and compliance in banking.",
+                  bio: "Building Salency’s go-to-market and operations. Previously led revenue analytics and operational strategy at Adaptavist Group. Background in institutional client management and compliance in banking.",
                   initials: "N",
                 },
                 {
                   name: "Babajide Okusanya",
                   title: "Co-founder & Technical Lead",
-                  bio: "LLM specialist building Cerebro’s extraction and mapping engine. Previously scaled a B2B marketplace to meaningful ARR. Deep experience in applied AI.",
+                  bio: "LLM specialist building Salency’s extraction and mapping engine. Previously scaled a B2B marketplace to meaningful ARR. Deep experience in applied AI.",
                   initials: "B",
                 },
               ].map((founder, i) => (
@@ -355,7 +355,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <p className="mt-4 pt-4 border-t border-white/10 text-sm text-gray-400">
-                  If you continue after the pilot, Cerebro is priced as a simple per-rep SaaS seat, with volume discounts for larger teams — just like your other sales tools.
+                  If you continue after the pilot, Salency is priced as a simple per-rep SaaS seat, with volume discounts for larger teams — just like your other sales tools.
                 </p>
               </div>
 
@@ -388,21 +388,21 @@ export default function Home() {
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
               <div className="w-6 h-6 relative">
-                <img src="/logo.png" alt="Cerebro Logo" className="object-contain w-full h-full opacity-80" />
+                <img src="/logo.png" alt="Salency Logo" className="object-contain w-full h-full opacity-80" />
               </div>
-              <span className="text-xl font-bold text-white">Cerebro</span>
+              <span className="text-xl font-bold text-white">Salency</span>
             </div>
             <p className="text-sm text-gray-500">Toronto, Canada</p>
           </div>
 
           <div className="flex gap-6 text-sm text-gray-400">
-            <a href="mailto:founders@trycerebro.com" className="hover:text-white transition-colors py-3">founders@trycerebro.com</a>
+            <a href="mailto:founders@salency.ai" className="hover:text-white transition-colors py-3">founders@salency.ai</a>
             <a href="/privacy" className="hover:text-white transition-colors py-3">Privacy Policy</a>
             <a href="/terms" className="hover:text-white transition-colors py-3">Terms</a>
           </div>
 
           <div className="text-sm text-gray-600">
-            © 2026 Cerebro. All rights reserved.
+            © 2026 Salency. All rights reserved.
           </div>
         </div>
       </footer>

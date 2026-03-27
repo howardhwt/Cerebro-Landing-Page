@@ -1,6 +1,6 @@
-# Cerebro Landing Page
+# Salency Landing Page
 
-A Next.js 14 B2B SaaS landing page for Cerebro, featuring a dark theme, mobile-first design, and conversion-optimized structure.
+A Next.js 14 B2B SaaS landing page for Salency, featuring a dark theme, mobile-first design, and conversion-optimized structure.
 
 ## Features
 

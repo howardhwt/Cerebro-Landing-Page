@@ -1,10 +1,10 @@
-# Cerebro Landing Page — Design & Content Tasks
+# Salency Landing Page — Design & Content Tasks
 
 ## This Week (High Priority)
 
 - [x] Fix hero headline and sub-headline to match the brief
   - Headline → "AI that remembers every customer pain your sales reps forget."
-  - Sub → "Gong records your calls. Cerebro solves what happens after."
+  - Sub → "Gong records your calls. Salency solves what happens after."
   - Cut the 4 body copy blocks above the CTA down to 2 tight lines
 
 - [x] Add Gong comparison table (positioning / wedge section)
@@ -25,7 +25,7 @@
 ## Next Sprint
 
 - [x] Replace or reframe the product mockup
-  - New 2-panel interface: left = raw transcript with highlighted extractions, right = Cerebro output (pains + confidence scores + citations + product match + follow-up draft)
+  - New 2-panel interface: left = raw transcript with highlighted extractions, right = Salency output (pains + confidence scores + citations + product match + follow-up draft)
   - Shows actual V1 workflow accurately
 
 - [x] Rewrite Problem section with two-persona framing (from brief)
@@ -57,7 +57,7 @@
 - [x] Fix nav and footer items
   - Removed "Home" link from nav
   - Fixed mobile hamburger (now a client component with toggle state)
-  - Added founders@trycerebro.com to footer
+  - Added founders@salency.ai to footer
   - Added "Toronto, Canada" to footer
   - Removed LinkedIn link
   - Added "Team" nav item linking to #team anchor

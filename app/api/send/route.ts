@@ -50,7 +50,7 @@ export async function POST(request: Request) {
 
         // 1. Send Admin Notification
         const adminEmailFn = resend.emails.send({
-            from: 'Cerebro Admin <onboarding@resend.dev>',
+            from: 'Salency Admin <onboarding@resend.dev>',
             to: ['delivered@resend.dev'], // TODO: Replace with your actual admin email
             subject: `New Pilot Request: ${escapeHtml(companyName)}`,
             html: `
@@ -67,14 +67,14 @@ export async function POST(request: Request) {
         // Note: In Resend "Test Mode", you can ONLY send to your verified email. 
         // Sending to the user's random email will fail unless you verify your domain.
         const userEmailFn = resend.emails.send({
-            from: 'Cerebro Team <onboarding@resend.dev>',
+            from: 'Salency Team <onboarding@resend.dev>',
             to: [email],
-            subject: 'Pilot Request Received - Cerebro',
+            subject: 'Pilot Request Received - Salency',
             html: `
         <h1>We received your request!</h1>
         <p>Hi ${escapeHtml(firstName)},</p>
-        <p>Thanks for your interest in the Cerebro pilot. We've received your details and will be in touch within 24 hours.</p>
-        <p>Best,<br/>The Cerebro Team</p>
+        <p>Thanks for your interest in the Salency pilot. We've received your details and will be in touch within 24 hours.</p>
+        <p>Best,<br/>The Salency Team</p>
       `,
         });
 

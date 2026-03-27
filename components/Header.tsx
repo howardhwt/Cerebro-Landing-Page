@@ -11,9 +11,9 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 relative">
-            <img src="/logo.png" alt="Cerebro Logo" className="object-contain w-full h-full" />
+            <img src="/logo.png" alt="Salency Logo" className="object-contain w-full h-full" />
           </div>
-          <span className="font-bold text-xl tracking-tight text-white font-heading">Cerebro</span>
+          <span className="font-bold text-xl tracking-tight text-white font-heading">Salency</span>
         </div>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">

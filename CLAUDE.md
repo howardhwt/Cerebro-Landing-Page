@@ -32,7 +32,7 @@ Single-page marketing/landing site built with **Next.js 16 App Router**, **React
 - `app/api/send/route.ts` — Single POST endpoint for pilot signup form. Validates with Zod, checks honeypot, and sends two emails via Resend (admin notification + user confirmation).
 - `components/EmailForm.tsx` — Client component using React Hook Form. Includes a hidden honeypot `website` field for bot detection. Posts to `/api/send`.
 - `components/Header.tsx` — Responsive header with mobile hamburger menu and "Get Early Access" CTA.
-- `components/HeroMock.tsx` — Interactive replica of Cerebro's product UI with tabbed views (Transcript, Pains, Objections, etc.).
+- `components/HeroMock.tsx` — Interactive replica of Salency's product UI with tabbed views (Transcript, Pains, Objections, etc.).
 - `components/ScrollReveal.tsx` — Client component using IntersectionObserver for scroll-triggered fade-in animations. Respects `prefers-reduced-motion`.
 - `components/SpotlightCard.tsx` — Client component wrapping cards with a mouse-tracking radial gradient spotlight effect.
 - `components/ProblemCard.tsx` — Presentational wrapper around `SpotlightCard`.

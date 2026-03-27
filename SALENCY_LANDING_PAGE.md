@@ -1,8 +1,8 @@
-# Cerebro Landing Page — Claude Code Brief
+# Salency Landing Page — Claude Code Brief
 
 ## What This Is
 
-Pre-seed startup landing page for **Cerebro**, a B2B SaaS sales intelligence platform. The page needs to convert two audiences: (1) potential pilot customers (sales/CS leaders at B2B SaaS companies) and (2) investors/accelerator reviewers who will Google us. No fluff. No "unlock the power of AI." This should feel like a company that's already shipping, not a pitch deck in HTML form.
+Pre-seed startup landing page for **Salency**, a B2B SaaS sales intelligence platform. The page needs to convert two audiences: (1) potential pilot customers (sales/CS leaders at B2B SaaS companies) and (2) investors/accelerator reviewers who will Google us. No fluff. No "unlock the power of AI." This should feel like a company that's already shipping, not a pitch deck in HTML form.
 
 ---
 
@@ -10,13 +10,13 @@ Pre-seed startup landing page for **Cerebro**, a B2B SaaS sales intelligence pla
 
 **AI that remembers every customer pain your sales reps forget.**
 
-## What Cerebro Actually Does
+## What Salency Actually Does
 
-Cerebro is a sales intelligence layer that turns sales call transcripts into structured, actionable context. It extracts customer pain points, maps them to relevant products and features, and generates follow-ups — so reps stop losing deals to forgotten context, and anyone inheriting an account gets full history instead of nothing.
+Salency is a sales intelligence layer that turns sales call transcripts into structured, actionable context. It extracts customer pain points, maps them to relevant products and features, and generates follow-ups — so reps stop losing deals to forgotten context, and anyone inheriting an account gets full history instead of nothing.
 
 ### The Core Insight (Use This to Inform Tone)
 
-Reps are biased captors. They only write down what they already understand — which means raw customer pain AND product fit signals get lost simultaneously. Gong records calls. Cerebro solves what happens after.
+Reps are biased captors. They only write down what they already understand — which means raw customer pain AND product fit signals get lost simultaneously. Gong records calls. Salency solves what happens after.
 
 ### MVP Capabilities (V1 — Live)
 
@@ -27,7 +27,7 @@ Reps are biased captors. They only write down what they already understand — w
 - Generate structured call recaps and follow-up email drafts
 - Citations and confidence scores on all outputs
 
-### What Cerebro Does NOT Do (Don't Imply These)
+### What Salency Does NOT Do (Don't Imply These)
 
 - Does NOT replace your CRM
 - Does NOT record calls (not a Gong competitor)
@@ -43,8 +43,8 @@ Reps are biased captors. They only write down what they already understand — w
 **Headline:** "AI that remembers every customer pain your sales reps forget."
 
 **Subheadline (one of these, pick what works with the design):**
-- "Sales reps are biased captors. They only document what they already understand — which means customer pain and product fit signals get lost simultaneously. Cerebro fixes the last mile."
-- "Gong records your calls. Cerebro solves what happens after."
+- "Sales reps are biased captors. They only document what they already understand — which means customer pain and product fit signals get lost simultaneously. Salency fixes the last mile."
+- "Gong records your calls. Salency solves what happens after."
 
 **CTA:** "Request Early Access" → links to a simple email capture form or Typeform/Calendly embed. Keep it tight — name, email, company, role. No sprawling form.
 
@@ -60,21 +60,21 @@ New AE on the account. CS director picking up a client relationship. They're not
 
 ### 3. How It Works (Simple 3-Step Visual)
 
-Step 1: **Ingest your product catalog** — Cerebro structures your company's products, features, and positioning into a queryable knowledge base.
+Step 1: **Ingest your product catalog** — Salency structures your company's products, features, and positioning into a queryable knowledge base.
 
-Step 2: **Upload a call transcript** — Cerebro extracts pains, objections, competitors, requirements, and next steps. Every extraction is cited back to the source.
+Step 2: **Upload a call transcript** — Salency extracts pains, objections, competitors, requirements, and next steps. Every extraction is cited back to the source.
 
 Step 3: **Get structured output** — Pain-to-product mappings, call recaps, and follow-up drafts. Your reps send better emails in minutes, not hours. Anyone on the team can pick up the thread.
 
 ### 4. The Wedge (Positioning Against Gong)
 
-Don't trash Gong. Position Cerebro as the layer that completes what Gong starts.
+Don't trash Gong. Position Salency as the layer that completes what Gong starts.
 
-Key message: "Gong records everything. But a full transcript doesn't tell your CS director which product solves which pain, or give your new AE the context they need to pick up where someone left off. Cerebro does the last mile Gong leaves completely unaddressed."
+Key message: "Gong records everything. But a full transcript doesn't tell your CS director which product solves which pain, or give your new AE the context they need to pick up where someone left off. Salency does the last mile Gong leaves completely unaddressed."
 
 This section should feel confident, not defensive. One short paragraph or a clean side-by-side comparison visual:
 
-| | Gong | Cerebro |
+| | Gong | Salency |
 |---|---|---|
 | Records calls | ✓ | Works with any transcript |
 | Coaches reps in the moment | ✓ | — |
@@ -85,13 +85,13 @@ This section should feel confident, not defensive. One short paragraph or a clea
 
 ### 5. Team
 
-Three co-founders. Keep bios tight — 2-3 sentences each. Lead with Cerebro, then relevant background.
+Three co-founders. Keep bios tight — 2-3 sentences each. Lead with Salency, then relevant background.
 
 **Howard** — Co-founder & CEO. Former founding AE at Viggle (a16z-backed). Led MUFG Hong Kong's first Panda Bond. Finance-to-startup trajectory across BD roles at Sequence and Treasure. MBET, University of Waterloo.
 
-**Nikki Ip** — Co-founder & COO. Building Cerebro's go-to-market and operations. Previously led revenue analytics and operational strategy at Adaptavist Group. Background in institutional client management and compliance (AML/KYC) in banking.
+**Nikki Ip** — Co-founder & COO. Building Salency's go-to-market and operations. Previously led revenue analytics and operational strategy at Adaptavist Group. Background in institutional client management and compliance (AML/KYC) in banking.
 
-**Babajide Okusanya** — Co-founder & Technical Lead. LLM specialist building Cerebro's extraction and mapping engine. Previously scaled a B2B marketplace to meaningful ARR. Active builder with deep experience in applied AI.
+**Babajide Okusanya** — Co-founder & Technical Lead. LLM specialist building Salency's extraction and mapping engine. Previously scaled a B2B marketplace to meaningful ARR. Active builder with deep experience in applied AI.
 
 ### 6. CTA (Bottom)
 
@@ -99,9 +99,9 @@ Repeat the "Request Early Access" CTA. Add a line like: "We're onboarding pilot 
 
 ### 7. Footer
 
-- Contact email (founders@trycerebro.com or similar — use placeholder if no real email yet)
+- Contact email (founders@salency.ai or similar — use placeholder if no real email yet)
 - Toronto, Canada
-- © 2026 Cerebro
+- © 2026 Salency
 - No social links unless they actually exist and are active
 
 ---
@@ -157,7 +157,7 @@ This is NOT a playful consumer app. This is NOT a dark-mode dev tool. This is a 
 - No backend needed unless we're wiring up a real form submission
 - If adding email capture, a simple Formspree or similar integration works
 - Optimize for fast load — no heavy frameworks for a landing page
-- SEO basics: proper meta tags, og:image, title = "Cerebro — AI that remembers every customer pain your sales reps forget"
+- SEO basics: proper meta tags, og:image, title = "Salency — AI that remembers every customer pain your sales reps forget"
 - Favicon: use a simple "C" mark or brain icon as placeholder
 
 ---
