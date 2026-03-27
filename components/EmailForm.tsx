@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Loader2 } from 'lucide-react';
+import { track } from '@vercel/analytics';
 
 interface FormData {
     firstName: string;
@@ -12,39 +13,47 @@ interface FormData {
     email: string;
     role: string;
     salesReps: string;
-    website?: string; // Honeypot field
+    website?: string;
 }
 
-export function EmailForm() {
+export function EmailForm({ prefillEmail }: { prefillEmail?: string }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+    const [serverError, setServerError] = useState<string | null>(null);
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
+        defaultValues: { email: prefillEmail ?? '' },
+    });
 
     const onSubmit = async (data: FormData) => {
-        // Honeypot check: If website is filled, silently return success
         if (data.website) {
             setIsSuccess(true);
             return;
         }
 
         setIsSubmitting(true);
+        setServerError(null);
         try {
             const response = await fetch('/api/send', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
             });
 
+            if (response.status === 429) {
+                setServerError('Too many requests. Please try again in a few minutes.');
+                return;
+            }
+
             if (!response.ok) {
-                throw new Error('Failed to submit');
+                const body = await response.json().catch(() => null);
+                setServerError(body?.error ?? 'Something went wrong. Please try again.');
+                return;
             }
 
             setIsSuccess(true);
-        } catch (error) {
-            console.error('Submission error:', error);
-            alert('Something went wrong. Please try again.');
+            track('form_complete');
+        } catch {
+            setServerError('Network error. Please check your connection and try again.');
         } finally {
             setIsSubmitting(false);
         }
@@ -60,8 +69,17 @@ export function EmailForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="bg-card p-8 rounded-2xl border border-white/10 max-w-2xl mx-auto shadow-2xl" suppressHydrationWarning>
-            {/* Honeypot Field - Hidden from humans */}
+        <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="bg-card p-8 rounded-2xl border border-white/10 max-w-2xl mx-auto shadow-2xl"
+            suppressHydrationWarning
+        >
+            {serverError && (
+                <div className="mb-6 bg-red-500/10 border border-red-500/30 text-red-300 text-sm rounded-lg px-4 py-3">
+                    {serverError}
+                </div>
+            )}
+
             <div className="hidden" aria-hidden="true">
                 <label className="block text-sm font-medium text-gray-300 mb-1">Website</label>
                 <input
@@ -81,6 +99,7 @@ export function EmailForm() {
                         className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors"
                         placeholder="Jane"
                         autoComplete="given-name"
+                        onFocus={() => track('form_start')}
                         suppressHydrationWarning
                     />
                     {errors.firstName && <span className="text-red-400 text-xs mt-1">Required</span>}

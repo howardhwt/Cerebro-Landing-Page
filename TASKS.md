@@ -64,3 +64,9 @@
 
 - [x] Remove unsubstantiated stat
   - Removed "70% of sales leaders lose $50K+ annually..." from Problem section
+
+## Deferred (CEO Review — March 2026)
+
+- [ ] Sample report download PDF (P2, depends on interactive demo for content alignment)
+- [ ] Work email domain validation on signup form (P3)
+- [ ] E2E test suite with Playwright (P2, post-feature implementation)

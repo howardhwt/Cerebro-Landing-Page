@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Outfit, Instrument_Serif } from "next/font/google";
+import { Geist, Outfit, Instrument_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,10 +8,6 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -25,8 +22,23 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Salency - Never Forget What Customers Need",
-  description: "B2B Sales Intelligence that listens, remembers, and alerts.",
+  metadataBase: new URL("https://salency.ai"),
+  title: "Salency — AI that remembers every customer pain your sales reps forget",
+  description: "Sales intelligence that turns call transcripts into structured context. Extract pains, map them to your products, and generate follow-ups — so reps stop losing deals to forgotten context.",
+  openGraph: {
+    title: "Salency — AI that remembers every customer pain your sales reps forget",
+    description: "Sales intelligence that turns call transcripts into structured context. Extract pains, map them to your products, and generate follow-ups.",
+    url: "https://salency.ai",
+    siteName: "Salency",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Salency — Sales Intelligence" }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Salency — AI that remembers every customer pain your sales reps forget",
+    description: "Sales intelligence that turns call transcripts into structured context.",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({
@@ -37,9 +49,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${instrumentSerif.variable} antialiased`}
+        className={`${geistSans.variable} ${outfit.variable} ${instrumentSerif.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

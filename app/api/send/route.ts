@@ -2,8 +2,18 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { z } from 'zod';
+import { Ratelimit } from '@upstash/ratelimit';
+import { Redis } from '@upstash/redis';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || 'placeholder');
+
+const ratelimit = process.env.UPSTASH_REDIS_REST_URL
+  ? new Ratelimit({
+      redis: Redis.fromEnv(),
+      limiter: Ratelimit.slidingWindow(5, '1 h'),
+      analytics: true,
+    })
+  : null;
 
 const FormSchema = z.object({
     firstName: z.string().min(1, "First name is required"),
@@ -12,20 +22,36 @@ const FormSchema = z.object({
     companyName: z.string().min(1, "Company name is required"),
     role: z.string().min(1, "Role is required"),
     salesReps: z.string().min(1, "Team size is required"),
-    website: z.string().optional(), // Honeypot
+    website: z.string().optional(),
 });
 
 export async function POST(request: Request) {
     try {
-        const body = await request.json();
+        if (ratelimit) {
+            const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'anonymous';
+            const { success } = await ratelimit.limit(ip);
+            if (!success) {
+                return NextResponse.json(
+                    { error: 'Too many requests. Please try again later.' },
+                    { status: 429 }
+                );
+            }
+        }
 
-        // 1. Silent Bot Check (Honeypot)
-        // If the 'website' field is populated, it's a bot. Return fake success.
+        let body;
+        try {
+            body = await request.json();
+        } catch {
+            return NextResponse.json(
+                { error: 'Invalid request body' },
+                { status: 400 }
+            );
+        }
+
         if (body.website) {
             return NextResponse.json({ success: true, status: 'filtered' });
         }
 
-        // Validate request body
         const result = FormSchema.safeParse(body);
 
         if (!result.success) {
@@ -48,10 +74,9 @@ export async function POST(request: Request) {
             });
         };
 
-        // 1. Send Admin Notification
         const adminEmailFn = resend.emails.send({
             from: 'Salency Admin <onboarding@resend.dev>',
-            to: ['delivered@resend.dev'], // TODO: Replace with your actual admin email
+            to: ['founders@salency.ai'],
             subject: `New Pilot Request: ${escapeHtml(companyName)}`,
             html: `
         <h1>New Pilot Request</h1>
@@ -63,9 +88,6 @@ export async function POST(request: Request) {
       `,
         });
 
-        // 2. Send User Confirmation
-        // Note: In Resend "Test Mode", you can ONLY send to your verified email. 
-        // Sending to the user's random email will fail unless you verify your domain.
         const userEmailFn = resend.emails.send({
             from: 'Salency Team <onboarding@resend.dev>',
             to: [email],
@@ -78,15 +100,12 @@ export async function POST(request: Request) {
       `,
         });
 
-        // Send both in parallel, but handle User email failure gracefully (for Sandbox mode)
         const [adminResult, userResult] = await Promise.allSettled([adminEmailFn, userEmailFn]);
 
-        // Check if Admin email failed (critical)
         if (adminResult.status === 'rejected') {
             throw new Error('Failed to send admin notification');
         }
 
-        // Return success even if user email fails (common in dev/sandbox)
         return NextResponse.json({
             success: true,
             adminId: adminResult.value.data?.id,
@@ -94,6 +113,7 @@ export async function POST(request: Request) {
         });
 
     } catch (error) {
-        return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+        console.error('Email send error:', error);
+        return NextResponse.json({ error: 'Failed to send email. Please try again.' }, { status: 500 });
     }
 }
