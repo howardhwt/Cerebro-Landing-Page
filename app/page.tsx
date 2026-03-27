@@ -99,7 +99,9 @@ export default function Home() {
           </ScrollReveal>
 
           {/* 3-Step Workflow */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <ScrollReveal>
+          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-14 mb-20">
+            <div className="hidden md:block absolute top-8 left-[20%] right-[20%] border-t border-dashed border-accent/15" aria-hidden="true" />
             {[
               {
                 icon: Upload,
@@ -121,15 +123,18 @@ export default function Home() {
               },
             ].map((item, i) => (
               <div key={i} className="relative">
-                <div className="text-[10px] font-mono text-accent/50 mb-3">{item.step}</div>
-                <div className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-4">
-                  <item.icon size={18} className="text-accent" />
+                <div className="text-[56px] md:text-[64px] font-bold text-accent/8 font-mono leading-none -mb-3 select-none" aria-hidden="true">
+                  {item.step}
                 </div>
-                <h4 className="text-base font-bold text-white mb-2">{item.heading}</h4>
+                <h4 className="text-base font-bold text-white mb-2 flex items-center gap-2">
+                  <item.icon size={15} className="text-accent/70 shrink-0" />
+                  {item.heading}
+                </h4>
                 <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
+          </ScrollReveal>
 
           {/* What Cerebro extracts */}
           <div className="text-center mb-12">
