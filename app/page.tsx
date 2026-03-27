@@ -4,6 +4,7 @@ import { Ear, Lightbulb, Bell, CheckCircle2, ArrowRight, FileText, Upload, Zap }
 import { EmailForm } from '@/components/EmailForm';
 import { Header } from '@/components/Header';
 import { HeroMock } from '@/components/HeroMock';
+import { ScrollReveal } from '@/components/ScrollReveal';
 
 export default function Home() {
   return (
@@ -50,10 +51,12 @@ export default function Home() {
         {/* PROBLEM SECTION */}
         <section className="py-16 md:py-24 bg-white/[0.02] border-y border-white/5">
           <div className="max-w-5xl mx-auto px-6">
+            <ScrollReveal>
             <div className="text-center mb-16">
               <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">The Problem</p>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The same context problem. Two different faces.</h2>
             </div>
+            </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Persona 1 */}
@@ -85,6 +88,7 @@ export default function Home() {
 
         {/* SOLUTION SECTION */}
         <section id="how-it-works" className="py-24 px-6 max-w-5xl mx-auto">
+          <ScrollReveal>
           <div className="text-center mb-16">
             <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">How It Works</p>
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Three steps. No integrations required.</h2>
@@ -92,6 +96,7 @@ export default function Home() {
               Start a pilot with a product catalog and a few call transcripts. That&apos;s it.
             </p>
           </div>
+          </ScrollReveal>
 
           {/* 3-Step Workflow */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
@@ -186,6 +191,7 @@ export default function Home() {
         {/* GONG COMPARISON SECTION */}
         <section className="py-16 md:py-20 px-6 border-y border-white/5">
           <div className="max-w-4xl mx-auto">
+            <ScrollReveal>
             <div className="text-center mb-12">
               <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">Positioning</p>
               <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The last mile Gong leaves unaddressed.</h2>
@@ -193,6 +199,7 @@ export default function Home() {
                 Gong records everything. But a full transcript doesn&apos;t tell your CS director which product solves which pain, or give your new AE the context they need to pick up where someone left off.
               </p>
             </div>
+            </ScrollReveal>
 
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -243,6 +250,7 @@ export default function Home() {
         {/* RESULTS SECTION */}
         <section className="py-24 bg-gradient-to-br from-accent/5 to-transparent border-y border-white/5">
           <div className="max-w-4xl mx-auto px-6">
+            <ScrollReveal>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">What changes when nothing gets lost.</h2>
               <p className="text-lg text-gray-400 mb-8 leading-relaxed">
@@ -265,16 +273,19 @@ export default function Home() {
                 ))}
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </section>
 
         {/* TEAM SECTION */}
         <section id="team" className="py-16 md:py-20 px-6">
           <div className="max-w-4xl mx-auto">
+            <ScrollReveal>
             <div className="text-center mb-16">
               <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">Team</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Built by people who&apos;ve done the job.</h2>
             </div>
+            </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -315,6 +326,7 @@ export default function Home() {
 
         {/* PILOT SECTION */}
         <section id="pilot" className="py-24 md:py-32 px-6 max-w-7xl mx-auto">
+          <ScrollReveal>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">Join the Pilot</h2>
@@ -356,6 +368,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </section>
       </main>
 
