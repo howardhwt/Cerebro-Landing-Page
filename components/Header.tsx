@@ -30,7 +30,7 @@ export function Header() {
         </a>
 
         <button
-          className="md:hidden text-white p-2"
+          className="md:hidden text-white p-2.5"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
