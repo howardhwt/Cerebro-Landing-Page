@@ -80,6 +80,7 @@ export function EmailForm() {
                         {...register('firstName', { required: true })}
                         className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors"
                         placeholder="Jane"
+                        autoComplete="given-name"
                         suppressHydrationWarning
                     />
                     {errors.firstName && <span className="text-red-400 text-xs mt-1">Required</span>}
@@ -90,6 +91,7 @@ export function EmailForm() {
                         {...register('lastName', { required: true })}
                         className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors"
                         placeholder="Doe"
+                        autoComplete="family-name"
                         suppressHydrationWarning
                     />
                     {errors.lastName && <span className="text-red-400 text-xs mt-1">Required</span>}
@@ -102,6 +104,7 @@ export function EmailForm() {
                     {...register('companyName', { required: true })}
                     className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors"
                     placeholder="Acme Inc."
+                    autoComplete="organization"
                     suppressHydrationWarning
                 />
                 {errors.companyName && <span className="text-red-400 text-xs mt-1">Required</span>}
@@ -114,6 +117,7 @@ export function EmailForm() {
                     {...register('email', { required: true, pattern: /^\S+@\S+$/i })}
                     className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors"
                     placeholder="jane@acme.com"
+                    autoComplete="email"
                     suppressHydrationWarning
                 />
                 {errors.email && <span className="text-red-400 text-xs mt-1">Valid email required</span>}
