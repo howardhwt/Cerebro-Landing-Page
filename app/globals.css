@@ -33,6 +33,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  text-wrap: balance;
 }
 
 /* Background Effects */
