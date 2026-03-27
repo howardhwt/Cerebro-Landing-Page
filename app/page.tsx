@@ -52,8 +52,8 @@ export default function Home() {
         <section className="py-24 bg-white/[0.02] border-y border-white/5">
           <div className="max-w-5xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-sm font-bold tracking-widest text-accent uppercase mb-3">The Problem</h2>
-              <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">The same context problem. Two different faces.</h3>
+              <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">The Problem</p>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The same context problem. Two different faces.</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -87,8 +87,8 @@ export default function Home() {
         {/* SOLUTION SECTION */}
         <section id="how-it-works" className="py-24 px-6 max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm font-bold tracking-widest text-accent uppercase mb-3">How It Works</h2>
-            <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">Three steps. No integrations required.</h3>
+            <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">How It Works</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Three steps. No integrations required.</h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Start a pilot with a product catalog and a few call transcripts. That&apos;s it.
             </p>
@@ -129,8 +129,8 @@ export default function Home() {
 
           {/* What Cerebro extracts */}
           <div className="text-center mb-12">
-            <h2 className="text-sm font-bold tracking-widest text-accent uppercase mb-3">What we extract</h2>
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Not just a summary. Structured signal.</h3>
+            <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">What we extract</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Not just a summary. Structured signal.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -178,8 +178,8 @@ export default function Home() {
         <section className="py-24 px-6 border-y border-white/5">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-sm font-bold tracking-widest text-accent uppercase mb-3">Positioning</h2>
-              <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">The last mile Gong leaves unaddressed.</h3>
+              <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">Positioning</p>
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">The last mile Gong leaves unaddressed.</h2>
               <p className="text-lg text-gray-400 max-w-2xl mx-auto">
                 Gong records everything. But a full transcript doesn&apos;t tell your CS director which product solves which pain, or give your new AE the context they need to pick up where someone left off.
               </p>
@@ -263,8 +263,8 @@ export default function Home() {
         <section id="team" className="py-24 px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-sm font-bold tracking-widest text-accent uppercase mb-3">Team</h2>
-              <h3 className="text-3xl md:text-4xl font-bold text-white">Built by people who&apos;ve done the job.</h3>
+              <p className="text-sm font-bold tracking-widest text-accent uppercase mb-3">Team</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Built by people who&apos;ve done the job.</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
