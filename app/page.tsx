@@ -363,10 +363,10 @@ export default function Home() {
             <p className="text-sm text-gray-500">Toronto, Canada</p>
           </div>
 
-          <div className="flex gap-8 text-sm text-gray-400">
-            <a href="mailto:founders@trycerebro.com" className="hover:text-white transition-colors">founders@trycerebro.com</a>
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
+          <div className="flex gap-6 text-sm text-gray-400">
+            <a href="mailto:founders@trycerebro.com" className="hover:text-white transition-colors py-3">founders@trycerebro.com</a>
+            <a href="#" className="hover:text-white transition-colors py-3">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors py-3">Terms</a>
           </div>
 
           <div className="text-sm text-gray-600">

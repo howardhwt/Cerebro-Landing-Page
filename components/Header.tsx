@@ -16,10 +16,10 @@ export function Header() {
           <span className="font-bold text-xl tracking-tight text-white font-heading">Cerebro</span>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-          <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
-          <a href="#team" className="hover:text-white transition-colors">Team</a>
-          <a href="#pilot" className="hover:text-white transition-colors">Pilot Access</a>
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+          <a href="#how-it-works" className="hover:text-white transition-colors py-3">How it Works</a>
+          <a href="#team" className="hover:text-white transition-colors py-3">Team</a>
+          <a href="#pilot" className="hover:text-white transition-colors py-3">Pilot Access</a>
         </nav>
 
         <a
