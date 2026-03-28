@@ -26,7 +26,7 @@ export function Header() {
           href="#pilot"
           className="hidden md:flex md:items-center bg-accent-warm hover:brightness-110 text-background min-h-[44px] px-5 py-2.5 rounded-lg text-sm font-bold transition-[color,background-color,filter] duration-200 shadow-lg shadow-accent-warm/20"
         >
-          Get Early Access
+          Request Pilot
         </a>
 
         <button
@@ -60,7 +60,7 @@ export function Header() {
               className="mt-3 bg-accent-warm hover:brightness-110 text-background px-5 py-3 rounded-lg text-sm font-bold transition-[color,background-color,filter] duration-200 text-center"
               onClick={() => setMobileOpen(false)}
             >
-              Get Early Access
+              Request Pilot
             </a>
           </nav>
         </div>

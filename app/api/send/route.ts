@@ -17,11 +17,8 @@ const ratelimit = process.env.UPSTASH_REDIS_REST_URL
 
 const FormSchema = z.object({
     firstName: z.string().min(1, "First name is required"),
-    lastName: z.string().min(1, "Last name is required"),
     email: z.string().email("Invalid email address"),
     companyName: z.string().min(1, "Company name is required"),
-    role: z.string().min(1, "Role is required"),
-    salesReps: z.string().min(1, "Team size is required"),
     website: z.string().optional(),
 });
 
@@ -61,7 +58,7 @@ export async function POST(request: Request) {
             );
         }
 
-        const { firstName, lastName, email, companyName, role, salesReps } = result.data;
+        const { firstName, email, companyName } = result.data;
 
         const escapeHtml = (unsafe: string | undefined) => {
             return (unsafe || '').replace(/[&<"']/g, (m) => {
@@ -80,11 +77,9 @@ export async function POST(request: Request) {
             subject: `New Pilot Request: ${escapeHtml(companyName)}`,
             html: `
         <h1>New Pilot Request</h1>
-        <p><strong>Name:</strong> ${escapeHtml(firstName)} ${escapeHtml(lastName)}</p>
+        <p><strong>Name:</strong> ${escapeHtml(firstName)}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
         <p><strong>Company:</strong> ${escapeHtml(companyName)}</p>
-        <p><strong>Role:</strong> ${escapeHtml(role)}</p>
-        <p><strong>Team Size:</strong> ${escapeHtml(salesReps)}</p>
       `,
         });
 

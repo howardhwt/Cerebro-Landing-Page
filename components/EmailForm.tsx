@@ -8,11 +8,8 @@ import { track } from '@vercel/analytics';
 
 interface FormData {
     firstName: string;
-    lastName: string;
     companyName: string;
     email: string;
-    role: string;
-    salesReps: string;
     website?: string;
 }
 
@@ -66,8 +63,9 @@ export function EmailForm({ prefillEmail }: { prefillEmail?: string }) {
     if (isSuccess) {
         return (
             <div className="bg-accent-warm/10 border border-accent-warm/30 p-8 rounded-xl text-center max-w-lg mx-auto">
-                <h3 className="text-2xl font-bold text-white mb-2">Thanks!</h3>
-                <p className="text-accent-warm/80">We&apos;ll be in touch within 24 hours to schedule your pilot.</p>
+                <h3 className="text-2xl font-bold text-white mb-2">You&apos;re in.</h3>
+                <p className="text-gray-300 mb-1">We&apos;ll email you within 24 hours to schedule your pilot kickoff.</p>
+                <p className="text-sm text-gray-500">Check your inbox for a confirmation from the Salency team.</p>
             </div>
         );
     }
@@ -78,6 +76,9 @@ export function EmailForm({ prefillEmail }: { prefillEmail?: string }) {
             className="bg-card p-8 rounded-2xl border border-white/10 max-w-2xl mx-auto shadow-2xl"
             suppressHydrationWarning
         >
+            <h3 className="text-xl font-bold text-white mb-1">Request Your Pilot</h3>
+            <p className="text-sm text-gray-400 mb-6">We&apos;ll reply within 24 hours.</p>
+
             {serverError && (
                 <div className="mb-6 bg-red-500/10 border border-red-500/30 text-red-300 text-sm rounded-lg px-4 py-3">
                     {serverError}
@@ -95,42 +96,17 @@ export function EmailForm({ prefillEmail }: { prefillEmail?: string }) {
                 />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">First Name *</label>
-                    <input
-                        {...register('firstName', { required: true })}
-                        className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-warm transition-colors"
-                        placeholder="Jane"
-                        autoComplete="given-name"
-                        onFocus={() => track('form_start')}
-                        suppressHydrationWarning
-                    />
-                    {errors.firstName && <span className="text-red-400 text-xs mt-1">Required</span>}
-                </div>
-                <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">Last Name *</label>
-                    <input
-                        {...register('lastName', { required: true })}
-                        className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-warm transition-colors"
-                        placeholder="Doe"
-                        autoComplete="family-name"
-                        suppressHydrationWarning
-                    />
-                    {errors.lastName && <span className="text-red-400 text-xs mt-1">Required</span>}
-                </div>
-            </div>
-
             <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-300 mb-1">Company Name *</label>
+                <label className="block text-sm font-medium text-gray-300 mb-1">First Name *</label>
                 <input
-                    {...register('companyName', { required: true })}
+                    {...register('firstName', { required: true })}
                     className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-warm transition-colors"
-                    placeholder="Acme Inc."
-                    autoComplete="organization"
+                    placeholder="Jane"
+                    autoComplete="given-name"
+                    onFocus={() => track('form_start')}
                     suppressHydrationWarning
                 />
-                {errors.companyName && <span className="text-red-400 text-xs mt-1">Required</span>}
+                {errors.firstName && <span className="text-red-400 text-xs mt-1">Required</span>}
             </div>
 
             <div className="mb-4">
@@ -146,38 +122,16 @@ export function EmailForm({ prefillEmail }: { prefillEmail?: string }) {
                 {errors.email && <span className="text-red-400 text-xs mt-1">Valid email required</span>}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">Role *</label>
-                    <select
-                        {...register('role', { required: true })}
-                        className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-warm transition-colors appearance-none"
-                        suppressHydrationWarning
-                    >
-                        <option value="">Select Role...</option>
-                        <option value="VP Sales">VP Sales</option>
-                        <option value="RevOps">RevOps</option>
-                        <option value="Sales Enablement">Sales Enablement</option>
-                        <option value="Founder">Founder</option>
-                        <option value="Other">Other</option>
-                    </select>
-                    {errors.role && <span className="text-red-400 text-xs mt-1">Required</span>}
-                </div>
-                <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">Number of Sales Reps *</label>
-                    <select
-                        {...register('salesReps', { required: true })}
-                        className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-warm transition-colors appearance-none"
-                        suppressHydrationWarning
-                    >
-                        <option value="">Select Range...</option>
-                        <option value="5-10">5-10</option>
-                        <option value="10-25">10-25</option>
-                        <option value="25-50">25-50</option>
-                        <option value="50+">50+</option>
-                    </select>
-                    {errors.salesReps && <span className="text-red-400 text-xs mt-1">Required</span>}
-                </div>
+            <div className="mb-8">
+                <label className="block text-sm font-medium text-gray-300 mb-1">Company Name *</label>
+                <input
+                    {...register('companyName', { required: true })}
+                    className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-warm transition-colors"
+                    placeholder="Acme Inc."
+                    autoComplete="organization"
+                    suppressHydrationWarning
+                />
+                {errors.companyName && <span className="text-red-400 text-xs mt-1">Required</span>}
             </div>
 
             <button
@@ -185,7 +139,7 @@ export function EmailForm({ prefillEmail }: { prefillEmail?: string }) {
                 disabled={isSubmitting}
                 className="w-full bg-accent-warm hover:brightness-110 text-background font-bold py-4 rounded-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center text-lg shadow-[0_0_20px_rgba(232,146,90,0.3)] hover:shadow-[0_0_30px_rgba(232,146,90,0.5)] transition-[color,background-color,box-shadow,transform,opacity,filter] duration-200"
             >
-                {isSubmitting ? <Loader2 className="animate-spin mr-2" /> : 'Get Early Access'}
+                {isSubmitting ? <Loader2 className="animate-spin mr-2" /> : 'Request Pilot'}
             </button>
 
             <p className="text-center text-xs text-gray-500 mt-4">
