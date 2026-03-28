@@ -16,7 +16,7 @@ export default function Home() {
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
               <div className="w-6 h-6 relative">
-                <img src="/logo.png" alt="Salency Logo" className="object-contain w-full h-full opacity-80" />
+                <img src="/logo.svg" alt="Salency Logo" className="object-contain w-full h-full opacity-80" />
               </div>
               <span className="text-xl font-bold text-white">Salency</span>
             </div>

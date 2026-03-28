@@ -5,7 +5,6 @@ import { CheckCircle2 } from 'lucide-react';
 import { HeroSection } from '@/components/HeroSection';
 import { SocialProof } from '@/components/SocialProof';
 import { FounderVideo } from '@/components/FounderVideo';
-import { StickyCtaBar } from '@/components/StickyCtaBar';
 import { EmailForm } from '@/components/EmailForm';
 import { ScrollReveal } from '@/components/ScrollReveal';
 
@@ -14,8 +13,6 @@ export function PageClient() {
 
   return (
     <>
-      <StickyCtaBar />
-
       <main className="pt-20">
         <HeroSection onEmailCapture={setCapturedEmail} />
         <SocialProof />

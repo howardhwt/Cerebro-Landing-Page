@@ -9,9 +9,9 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 relative">
-            <img src="/logo.png" alt="Salency Logo" className="object-contain w-full h-full" />
+        <div className="flex items-center gap-1">
+          <div className="w-10 h-10 relative overflow-hidden rounded-lg">
+            <img src="/logo.svg" alt="Salency Logo" className="object-contain w-full h-full scale-[2.0]" />
           </div>
           <span className="font-bold text-xl tracking-tight text-white font-heading">Salency</span>
         </div>
